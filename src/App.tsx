@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import TestComponent from './TestComponent';
+import TestComponent, { onTestComponentChangeEvent } from './TestComponent';
 import { sum } from './Utils';
 
 
@@ -16,7 +16,7 @@ function App() {
           id={'test'}
           label={'My Label'}
           value={value}
-          onChange={(e) => setValue(e.value)}
+          onChange={(event: onTestComponentChangeEvent) => setValue(event.value)}
         />
         <hr />
         <a

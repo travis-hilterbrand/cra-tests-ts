@@ -27,7 +27,7 @@ it('change event', () => {
 });
 test('change event 2', async () => {
   let value = '123';
-  const { getByRole } = render(<TestComponent value={value} onChange={(event) => value = event.value} />);
-  await userEvent.type(getByRole('input'), '1234');
+  const { getByTestId } = render(<TestComponent value={value} onChange={(event) => value = event.value} />);
+  await userEvent.type(getByTestId('input'), '1234');
   expect(value).toEqual('1234');
 });
